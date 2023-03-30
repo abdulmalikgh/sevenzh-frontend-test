@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Product Sans Regular";
+     src: url('../fonts/Product Sans Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Product Sans Bold";
+    src:url("../fonts/Product Sans Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Avenir Heavy";
+    src:url("../fonts/Avenir Heavy.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Avenir Medium";
+    src:url("../fonts/Avenir Medium.ttf") format("truetype");
+}
+
+
+.wrapper{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.side-bar{
+    width: 308px;
+    max-width: 308px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    padding-top: 150px;
+}
+.main{
+    width: calc(100% - 308px);
+    height: 100vh;
+    background-color: #F5F5FB;
+}
+.side-bar-active{
+  background-color: #2A36A4;  
+}
+.side-bar-active span{
+    color: #FFF!important;
+    font-family: "Product Sans Bold";
+}
+.side-bar-nav-text{
+    font-size: 16px;
+    color:#A0A0A0;
+    line-height: 100%;
+    font-family: "Product Sans Regular";
+}
+.main-header{
+    width: 100%;
+    padding-top: 52px;
+    padding-bottom: 36px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-header-nav{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+}
+.main-header-nav .text{
+    color:rgba(56, 47, 144, 0.6);
+    font-size: 18px;
+    font-family: "Avenir Heavy";
+}
+.main-title{
+    padding-left: 65px;
+}
+.main-title h2 {
+    color:  #382F90;
+    font-size: 32px;
+    font-family: "Avenir Heavy";
+}
+.main-title h5{
+    color: #9FA2B4;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: "Avenir Medium";
+}
+.main-card-wrapper{
+    width: 100%;
+    padding-left: 65px;
+    padding-top: 41px;
+}
+.main-card{
+    width: 929px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 46px 60px 50px 94px;
+}
