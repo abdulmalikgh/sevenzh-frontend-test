@@ -24,8 +24,8 @@
         token:''
       }
     },
-    async beforeMount() {
-      await this.getToken()
+     beforeMount() {
+      // await this.getToken()
     },
     methods: {
       // Get bearer token

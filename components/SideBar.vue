@@ -4,6 +4,9 @@
     class="side-bar"
   >
   <div>
+    <button class="close-side-bar" @click="$emit('handleHideSide')" >
+        <img src="../static/icons/close.svg" />
+    </button>
   <b-nav vertical>
     <b-nav-item class="side-bar-active px-4 py-2">
         <div class="d-flex">

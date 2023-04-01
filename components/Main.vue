@@ -2,7 +2,7 @@
     <div
       class="main"
     >
-      <Header />
+      <Header @handleShowSideBar="$emit('handleShowSideBar')" />
       <MainTitle />
       <MainCard />
     </div>
