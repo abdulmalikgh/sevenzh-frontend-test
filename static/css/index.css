@@ -94,3 +94,10 @@
     border-radius: 5px;
     padding: 46px 60px 50px 94px;
 }
+
+.card-subsection-title{
+    color:#382F90;
+    font-size: 18px;
+    font-family: "Avenir Heavy";
+    padding-bottom: 23px;
+}
