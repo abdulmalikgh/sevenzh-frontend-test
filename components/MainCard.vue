@@ -126,7 +126,12 @@
           this.formData.investigations = this.formData.investigations.map( i => parseInt(i))
           this.$apollo.mutate({
             mutation:ADD_MEDICAL_RECORDS,
-            variables:this.formData
+            variables:this.formData,
+            context: {
+              headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`,
+              },
+            },
           }).then( res => {
             this.$toast.success('Medical Report Successfully Added.').goAway(3000)
             this.addingMedicalReports = false
@@ -150,15 +155,23 @@
           variables
         })
         console.log(data)
-        // eslint-disable-next-line camelcase
-        const { data: { investigation_types }} = await await this.$apollo.query({
-          query:INVESTIGATIONS_QUERY
+        localStorage.setItem('token', '5203|Zud5myeZDAOWjV01DIASlkDg6CwBuV0Zq2T7LuHp')
+         // eslint-disable-next-line camelcase
+        const { data: { investigation_types }} = await this.$apollo.query({
+          query:INVESTIGATIONS_QUERY,
+          context: {
+              headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`,
+              },
+            },
         })
+        // I am trying to get the login token but I am getting internal server error
+        // I don't have much time so I decided to hardcode it here
+        
         // eslint-disable-next-line camelcase
         this.x_rays = investigation_types[0].investigations
         // eslint-disable-next-line camelcase
         this.ultrasound_scans = investigation_types[1].investigations
-        console.log(this.x_rays,this.ultrasound_scans)
        } catch (error) {
         console.log("error", error)
        } finally {

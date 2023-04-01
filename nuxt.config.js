@@ -40,8 +40,16 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://testdrive.kompletecare.com/graphql'
-      }
+        httpEndpoint: 'https://testdrive.kompletecare.com/graphql',
+        context: ({ app }) => {
+          const token = app.$auth.getToken('tokenType')
+          return {
+            headers: {
+              Authorization: token ? `Bearer ${token}` : null,
+            },
+          }
+        },
+      },
     },
   },
 
