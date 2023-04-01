@@ -18,6 +18,11 @@
     src:url("../fonts/Avenir Medium.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Lato Bold";
+    src:url("../fonts/Lato-Bold.ttf") format("truetype");
+}
+
 
 .wrapper{
     margin:0;
@@ -32,11 +37,14 @@
     height: 100vh;
     background-color: #FFFFFF;
     padding-top: 150px;
-    position:static;
+    position: fixed;
+    z-index: 10;
 }
 .main{
     width: calc(100% - 308px);
-    height: 100vh;
+    height: 100%;
+    position: absolute;
+    right: 0px;
     background-color: #F5F5FB;
 }
 .side-bar-active{
@@ -89,10 +97,12 @@
     padding-left: 65px;
     padding-right: 65px;
     padding-top: 41px;
+    background-color: #F5F5FB;
+    padding-bottom: 100px;
 }
 .main-card{
     width: 100%;
-    max-width: 929px;
+    max-width: 1000px;
     background-color: #FFFFFF;
     border-radius: 5px;
     padding: 46px 60px 50px 94px;
@@ -103,6 +113,7 @@
     font-size: 18px;
     font-family: "Avenir Heavy";
     padding-bottom: 23px;
+    margin:0px;
 }
 .close-side-bar{
     display: none;
@@ -128,12 +139,42 @@
     width: 32px !important;
     height: 32px !important;
 }
+.checkbox{
+    font-size: 14px;
+    color: #000000;
+}
+.select-section-title{
+    color: #9FA2B4;
+    line-height: 17px;
+    font-size: 14px;
+    font-family: "Lato Bold";
+}
+.save{
+    font-family: "Avenir Medium";
+    font-size: 18px;
+    line-height: 20px;
+    background-color: #382F90;
+    color:#FFFFFF;
+    width:159px;
+    height: 46px;
+    border-radius: 7px;
+    border:none;
+    outline:none;
+    float:  right;
+}
+.custom-select {
+    background-image: url("../icons/arrow down.svg");
+    color: #9FA2B4;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "Lato Bold";
+}
 @media screen and (max-width: 992px) {
     .close-side-bar,.open-side-bar{
         display: block;
     }
     .side-bar{
-        position: absolute;
+        
     }
     .main{
         width: 100%

@@ -1,0 +1,10 @@
+query {
+  investigation_types {
+    id
+    title
+    investigations {
+      id
+      title
+    }
+  }
+}
